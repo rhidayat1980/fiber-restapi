@@ -6,6 +6,7 @@ require gorm.io/driver/postgres v1.5.7
 
 require (
 	github.com/andybalholm/brotli v1.0.5 // indirect
+	github.com/badoux/checkmail v1.2.4
 	github.com/gofiber/fiber/v2 v2.52.2 // indirect
 	github.com/google/uuid v1.5.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
