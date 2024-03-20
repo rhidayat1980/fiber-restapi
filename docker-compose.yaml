@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+      - DATABASE_HOST=localhost
+      - DATABASE_PORT=5432
+      
+    tty: true
+    restart: on-failure
+    depends_on:
+      - postgresdb
+
+  postgresdb:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+      - DATABASE_HOST=localhost
+    ports:
+      - '5432:5432'
+    

@@ -6,7 +6,7 @@ import (
 	"github.com/rhidayat1980/fiber-restapi/middleware"
 )
 
-func Initialize(router *fiber.App) {
+func Initalize(router *fiber.App) {
 
 	router.Use(middleware.Security)
 
